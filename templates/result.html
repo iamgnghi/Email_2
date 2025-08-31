@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thanks</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Thanks for joining our email list</h1>
+  </header>
+
+  <div class="container">
+    <p class="subtitle">Here is the information that you entered:</p>
+
+    <div class="info">
+      <p><strong>Email:</strong> {{ email }}</p>
+      <p><strong>First Name:</strong> {{ firstname }}</p>
+      <p><strong>Last Name:</strong> {{ lastname }}</p>
+      <p><strong>Date of Birth:</strong> {{ dob }}</p>
+      <p><strong>How did you hear about us?:</strong> {{ source }}</p>
+      <p><strong>Announcements:</strong>
+        {% if announce1 or announce2 %}
+          Yes
+        {% else %}
+          No
+        {% endif %}
+      </p>
+      <p><strong>Preferred Contact:</strong> {{ contact }}</p>
+    </div>
+
+    <p class="note">
+      To enter another email address, click on the Back button in your browser or the Return button below.
+    </p>
+
+    <form action="{{ url_for('index') }}">
+      <button type="submit" class="btn-gray">Return</button>
+    </form>
+  </div>
+</body>
+</html>

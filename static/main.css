@@ -1,0 +1,78 @@
+/* Reset khoảng trắng mặc định */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fce4ec;
+}
+
+/* Header với nền hồng gradient */
+header {
+  background: linear-gradient(90deg, #ff80ab, #f50057);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Container form */
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #f8bbd0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Chữ tiêu đề nhỏ lại */
+.container h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Input + select */
+input, select {
+  display: block;
+  width: 100%;
+  margin: 8px 0 16px 0;
+  padding: 10px;
+  border: 2px solid #f8bbd0;
+  border-radius: 20px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none; /* bỏ viền xanh mặc định */
+}
+
+/* Khi click vào input -> viền hồng */
+input:focus, select:focus {
+  border-color: #f50057;
+  box-shadow: 0 0 4px #f8bbd0;
+}
+
+/* Radio + checkbox giữ nguyên inline */
+input[type="radio"], input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  margin-right: 6px;
+}
+
+/* Nút bấm */
+button {
+  background-color: #f50057;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #d81b60;
+}
